@@ -26,9 +26,13 @@ The query can be a stored procedure or T-SQL, the query must return at least one
   - ``select CustomerNo, CustomerName from Customers where CustomerId=1234 ``
   - ``exec sp_GetCustomerInfoById @CustomerId=1234``
   - ``select getdate()``
+  
   The component has the capability to parse context properties in the query, providing a higher level of dynamism.
+  <br/>
   ``select CustomerNo, CustomerName from Customers where CustomerId={https://schemas.somecompany.com/customer-properties/customerId} ``
-  ``exec sp_GetCustomers @country={https://schemas.somecompany.com/customer-properties/country},@region={https://schemas.somecompany.com/customer-properties/country}``
+  <br/>Or<br/>
+  ``exec sp_GetCustomers @country={https://schemas.somecompany.com/customer-properties/country},@region={https://schemas.somecompany.com/customer-properties/region}``
+  
   If the property does not exist, the component will parse the property as null.
   If the query returns no records, and ThrowException is set to True, the component throws an exception; otherwise, the property will not be set.
 - ReturnedField: ReturnedField is an optional parameter, if provided, the destination property will be set to the corresponding value.
