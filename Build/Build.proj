@@ -7,11 +7,11 @@
     <SourceLocation>$(BUILD_SOURCESDIRECTORY)</SourceLocation>
   </PropertyGroup>
   <ItemGroup>
-    <Resource Include="$(BUILD_SOURCESDIRECTORY)\src\LargeFileHandler\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.LargeFileHandler.dll" />
+    <Resource Include="$(BUILD_SOURCESDIRECTORY)\src\SetPropertyFromDbQuery\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery.dll" />
   </ItemGroup>
 
   <Target Name="GetVersion">
-    <MSBuild.ExtensionPack.Framework.Assembly TaskAction="GetInfo" NetAssembly="$(BUILD_SOURCESDIRECTORY)\src\LargeFileHandler\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.LargeFileHandler.dll">
+    <MSBuild.ExtensionPack.Framework.Assembly TaskAction="GetInfo" NetAssembly="$(BUILD_SOURCESDIRECTORY)\src\SetPropertyFromDbQuery\bin\$(BuildConfiguration)\BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery.dll">
       <Output TaskParameter="OutputItems" ItemName="Info"/>
     </MSBuild.ExtensionPack.Framework.Assembly>
   </Target>
@@ -19,7 +19,7 @@
   <Target Name="GenerateMsi" DependsOnTargets="GetVersion">
     <MsiTask  ApplicationDescription="$(ApplicationDescription)"
               Version="%(Info.AssemblyInformationalVersion)"
-              FileName="BizTalkComponents.PipelineComponents.LargeFileHandler%(Info.AssemblyInformationalVersion).msi"
+              FileName="BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery%(Info.AssemblyInformationalVersion).msi"
               DestinationPath="$(DestinationPath)"
               ApplicationName="$(ApplicationName)"
               BtsAssemblies="@(BtsAssembly)"
