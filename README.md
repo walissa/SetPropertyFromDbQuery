@@ -1,4 +1,4 @@
-[![Build status](https://dev.azure.com/waal/BizTalk%20Components/_apis/build/status/BizTalk%20Components/SetPropertyFromDbQuery)](https://dev.azure.com/waal/BizTalk%20Components/_build/latest?definitionId=21)
+[![Build status](https://dev.azure.com/waal/BizTalk%20Components/_apis/build/status/BizTalk%20Components/SetPropertyFromDbQuery)](https://dev.azure.com/waal/BizTalk%20Components/_build/latest?definitionId=22)
 
 # Set Property From Db Query
 
