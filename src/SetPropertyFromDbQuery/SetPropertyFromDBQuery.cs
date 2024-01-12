@@ -133,6 +133,8 @@ namespace BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery
                 return $"'{(propertyValue as string).Replace("'", "''")}'";
             else if (propertyValue is DateTime)
                 return $"'{propertyValue as DateTime?:yyyy-MM-ddTHH:mm:ss.fffffff}'";
+            else if (propertyValue is bool)
+                return (bool)propertyValue ? "1" : "0";
             else
                 return propertyValue.ToString();
         }
