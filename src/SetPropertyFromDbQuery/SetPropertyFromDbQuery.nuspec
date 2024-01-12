@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery</id>
+    <version>$version$</version>
+    <title>SetPropertyFromDbQuery</title>
+    <authors>Wael Alissa</authors>
+    <owners>Wael Alissa</owners>
+    <projectUrl>https://github.com/walissa/SetPropertyFromDbQuery</projectUrl>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2024</copyright>
+    <tags>BizTalk</tags>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This component set a property from the returned value of executing a SQL Server query.</description>    
+  </metadata>
+  <files>
+    <file src="bin\release\BizTalkComponents.PipelineComponents.SetPropertyFromDbQuery.dll" target="lib\net46"/>
+  </files>
+</package>
